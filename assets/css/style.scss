@@ -108,3 +108,74 @@
   }
 }
 
+@media (min-width: 576px) {
+  .grilla {
+    @include funciones.establecerGrillaPrincipal(init.$gta-tablet, init.$gtc-tablet, init.$gtr-tablet);
+
+    header {
+
+      nav {
+        .container-fluid {
+          button {
+            border: none;
+          }
+        }
+      }
+
+      aside {
+        @include funciones.esconderContenedor();
+      }
+    }
+
+
+    section {
+
+      @include funciones.establecerFlex(column, wrap);
+      @include funciones.alinearComponentes(flex-start);
+
+      select {
+        @include funciones.configurarLimiteMedidas(100%, 95%);
+      }
+
+    }
+  }
+}
+
+@media (min-width: 992px) {
+
+  .grilla {
+
+    @include funciones.establecerGrillaPrincipal(init.$gta-desktop, init.$gtc-desktop, init.$gtr-desktop);
+
+    header {
+
+      nav {
+        @include funciones.esconderContenedor();
+      }
+
+      aside {
+        @include funciones.establecerFlex(column, wrap);
+        @include funciones.alinearComponentes();
+
+        .titulo {
+          @include funciones.establecerFlex();
+        }
+      }
+
+    }
+
+    section {
+      @include funciones.alinearComponentes();
+      @include funciones.configurarMedidas(200px, 100%);
+
+      select {
+        @include funciones.configurarLimiteMedidas(100%, 95%);
+      }
+    }
+
+    footer {
+      @include funciones.establecerFlex(column, wrap);
+      @include funciones.alinearComponentes();
+    }
+  }
+}
