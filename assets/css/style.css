@@ -1,3 +1,91 @@
+* p, * h1, * h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
+.grilla {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: "cabecera" "filtro" "principal" "pie";
+  grid-template-columns: 1fr;
+  grid-template-rows: 56px 100px auto 1fr;
+  grid-gap: 0 0;
+}
+.grilla header {
+  grid-area: cabecera;
+  background-color: #01589b;
+}
+.grilla header nav {
+  background-color: #01589b;
+}
+.grilla header nav .container-fluid button {
+  border: none;
+}
+.grilla header aside {
+  display: none;
+}
+.grilla section {
+  background-color: #e2e2e2;
+  grid-area: filtro;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: normal normal;
+  justify-content: center;
+  align-items: center;
+}
+.grilla section select {
+  max-height: 100%;
+  max-width: 95%;
+}
+.grilla main {
+  background-color: white;
+  grid-area: principal;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: normal normal;
+  justify-content: center;
+  align-items: center;
+}
+.grilla main .productos {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.grilla main .productos article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: normal normal;
+  justify-content: center;
+  align-items: center;
+  height: 340px;
+  width: 280px;
+  box-shadow: 0 0 5px gray;
+}
+.grilla main .productos article img {
+  height: 250px;
+  width: 250px;
+}
+.grilla main .productos article button {
+  width: 50%;
+  background-color: #01589b;
+}
+.grilla footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: normal normal;
+  justify-content: center;
+  align-items: center;
+  background-color: #002f6c;
+  grid-area: pie;
+}
 
 /*# sourceMappingURL=style.css.map */

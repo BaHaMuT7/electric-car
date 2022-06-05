@@ -1,0 +1,110 @@
+@use "colors/colors" as paletaColores;
+@use "mixins/mixins" as funciones;
+@use "variables/variables" as init;
+
+* {
+  p, h1, h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+}
+
+.grilla {
+  @include funciones.configurarMedidas();
+  @include funciones.establecerGrillaPrincipal(init.$gta-movil, init.$gtc-movil, init.$gtr-movil);
+
+  header {
+    @include funciones.marcarAreaGrilla(cabecera);
+
+    background: {
+      color: paletaColores.$tema;
+    }
+
+    nav {
+      background: {
+        color: paletaColores.$tema;
+      }
+
+      .container-fluid {
+        button {
+          border: none;
+        }
+      }
+    }
+
+    aside {
+      @include funciones.esconderContenedor();
+    }
+
+  }
+
+
+  section {
+
+    background: {
+      color: paletaColores.$bg-filtro;
+    }
+
+    @include funciones.marcarAreaGrilla(filtro);
+    @include funciones.establecerFlex(column, wrap);
+    @include funciones.alinearComponentes();
+
+    select {
+      @include funciones.configurarLimiteMedidas(100%, 95%);
+    }
+
+  }
+
+  main {
+    background: {
+      color: white;
+    }
+
+    @include funciones.marcarAreaGrilla(principal);
+    @include funciones.establecerFlex(column, wrap);
+    @include funciones.alinearComponentes();
+
+    .productos {
+
+      background: {
+        color: white;
+      }
+
+      @include funciones.establecerFlex(row, wrap, 10px);
+      @include funciones.alinearComponentes();
+
+      article {
+
+        @include funciones.establecerFlex(column, wrap);
+        @include funciones.alinearComponentes();
+        @include funciones.configurarMedidas(340px, 280px);
+        box-shadow: 0 0 5px gray;
+
+        img {
+          @include funciones.configurarMedidas(250px, 250px)
+        }
+
+        button {
+          width: 50%;
+          background: {
+            color: paletaColores.$tema;
+          }
+        }
+      }
+
+    }
+  }
+
+  footer {
+
+    @include funciones.establecerFlex(column, wrap);
+    @include funciones.alinearComponentes();
+
+    background: {
+      color: paletaColores.$footer;
+    }
+
+    @include funciones.marcarAreaGrilla(pie);
+  }
+}
+

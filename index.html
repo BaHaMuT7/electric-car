@@ -1,93 +1,148 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Hello, world!</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="assets/css/normalize.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <title>Autos eléctricos</title>
+</head>
+<body>
+
+<div class="grilla">
     <!-- Cabecera -->
     <header>
-      <!-- Barra de navegación -->
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">
-            <img src="assets/icons/car-electric.png" alt="Auto" />
-            Electric car
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#">Catálogo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#">Ofertas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#">Contacto</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">
+                    <img src="assets/icons/car-electric.png" alt="Auto"/>
+                    Electric car
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <aside>
+            <div class="titulo">
+                <img src="assets/icons/car-electric.png" alt="Auto"/>
+                <p class="text-white">Electric car</p>
+            </div>
+            <div class="opciones text-white mt-3">
+                <p>Inicio</p>
+                <p>Catálogo</p>
+                <p>Ofertas</p>
+                <p>Contacto</p>
+            </div>
+        </aside>
     </header>
+  <!-- Filtros -->
     <section>
-      <p>Ordenar por:</p>
-      <select>
-        <option value="precio">Precio</option>
-        <option value="nombre">Nombre</option>
-        <option value="categoria">Categoría</option>
-      </select>
+        <label for="filtro">Ordenar por:</label>
+        <select id="filtro" name="filtro-select" class="form-control">
+            <option value="precio">Precio</option>
+            <option value="nombre">Nombre</option>
+            <option value="categoria">Categoría</option>
+        </select>
     </section>
     <!-- Principal -->
     <main>
-      <div class="productos">
-        <article>
-          <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" height="250px" width="250px" />
-          <p>Modelo: Mercedea Benz</p>
-          <button>Ver más</button>
-        </article>
-      </div>
-      <div class="paginador">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <div class="productos mt-3">
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+            <article>
+                <img src="assets/img/mercedes.png" alt="Berlina Mercedes Benz" />
+                <p class="text-center mb-2">Modelo: Mercedes Benz</p>
+                <button class="btn btn-primary">Ver más</button>
+            </article>
+        </div>
+        <div class="paginador mt-3">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </main>
     <!-- Footer -->
     <footer>
-      <div class="redes-sociales">
-        <img src="assets/icons/facebook.png" alt="Facebook" />
-        <img src="assets/icons/instagram.png" alt="Instagram" />
-      </div>
-      <div class="bajada-pie">
-        <p>Todos los derechos reservados</p>
-      </div>
+        <div class="redes-sociales">
+            <img src="assets/icons/facebook.png" alt="Facebook"/>
+            <img src="assets/icons/instagram.png" alt="Instagram"/>
+        </div>
+        <div class="bajada-pie">
+            <p class="text-white">Todos los derechos reservados</p>
+        </div>
     </footer>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
 </html>
