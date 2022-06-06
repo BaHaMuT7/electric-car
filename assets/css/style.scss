@@ -61,7 +61,7 @@
     }
 
     @include funciones.marcarAreaGrilla(principal);
-    @include funciones.establecerFlex(column, wrap);
+    @include funciones.establecerFlex(column, nowrap);
     @include funciones.alinearComponentes();
 
     .productos {
@@ -108,7 +108,7 @@
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) AND (max-width: 991px){
   .grilla {
     @include funciones.establecerGrillaPrincipal(init.$gta-tablet, init.$gtc-tablet, init.$gtr-tablet);
 
@@ -161,12 +161,23 @@
           @include funciones.establecerFlex();
         }
       }
+    }
 
+    main {
+      margin-left: 10px;
+      @include funciones.establecerFlex(column, nowrap);
+      @include funciones.configurarMedidas(100%, 100%);
+
+      .productos {
+        @include funciones.configurarMedidas(100%, 100%);
+        @include funciones.establecerFlex(row, wrap, 0 10px);
+        @include funciones.alinearComponentes(flex-start, stretch);
+
+      }
     }
 
     section {
-      @include funciones.alinearComponentes();
-      @include funciones.configurarMedidas(200px, 100%);
+      @include funciones.configurarMedidas(100%, 100%);
 
       select {
         @include funciones.configurarLimiteMedidas(100%, 95%);
